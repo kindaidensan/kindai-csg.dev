@@ -1,0 +1,14 @@
+version: '2'
+services:
+  client:
+    build: ./kindai-csg.dev-docker
+    container_name: csg-client
+    restart: always
+    commnad: npm run start
+    working_dir: "/src"
+    ports:
+      - "8150:3000"
+    volumes:
+      - "./kindai-csg.dev:/src"
+    tty: true
+  
