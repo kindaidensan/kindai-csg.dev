@@ -4,34 +4,11 @@ services:
     build: ./kindai-csg.dev-docker
     container_name: csg-client
     restart: always
+    commnad: npm run start
     working_dir: "/src"
     ports:
       - "8150:3000"
     volumes:
       - "./kindai-csg.dev:/src"
     tty: true
-  gitbucket:
-    build: ./gitbucket-docker
-    container_name: csg-gitbucket
-    restart: always
-    volumes:
-      - ./gitbucket-data:/gitbucket
-    ports:
-      - "8180:8080"
-    networks:
-      - "git-network"
-  webhock:
-    build: ./webhock-docker
-    container_name: csg-webhock
-    restart: always
-    working_dir: "/src"
-    volumes:
-      - "./webhock:/src"
-    ports:
-      - "8160:3000"
-    tty: true
-    networks:
-      - "git-network"
-networks:
-  git-network:
-    driver: bridge
+  
