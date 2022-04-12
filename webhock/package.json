@@ -20,6 +20,6 @@
     "@types/showdown": "^1.9.3",
     "express": "^4.17.1",
     "showdown": "^1.9.1",
-    "simple-git": "^1.132.0"
+    "simple-git": "^3.5.0"
   }
 }
