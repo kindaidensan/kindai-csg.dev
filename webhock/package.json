@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@types/showdown": "^1.9.3",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "showdown": "^1.9.1",
     "simple-git": "^1.132.0"
   }
